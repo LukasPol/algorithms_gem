@@ -1,4 +1,6 @@
-def countingSort(a='geeksforgeeks',min=0,max=10)
+# Question: https://www.geeksforgeeks.org/counting-sort/
+
+def counting_sort(a='geeksforgeeks',min=0,max=10)
   a = a.split
   if min>max
     return "invalid range"

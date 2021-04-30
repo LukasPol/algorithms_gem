@@ -1,12 +1,14 @@
-def mergeSort(arr)
+# Question: https://www.geeksforgeeks.org/merge-sort/
+
+def merge_sort(arr)
   return arr if arr.length == 1
   middle = arr.length / 2
 
   left = arr[0...middle]
   right = arr[middle..-1]
 
-  sorted_left = mergeSort(left)
-  sorted_right =  mergeSort(right)
+  sorted_left = merge_sort(left)
+  sorted_right =  merge_sort(right)
 
   merge(sorted_left, sorted_right)
 end
@@ -24,6 +26,6 @@ end
 
 arr = [12, 11, 13, 5, 6, 7]
 
-sorted_arr = mergeSort(arr)
+sorted_arr = merge_sort(arr)
 
 p sorted_arr

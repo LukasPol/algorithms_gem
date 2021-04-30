@@ -1,4 +1,6 @@
-def bubbleSort(arr)
+# Question: https://www.geeksforgeeks.org/bubble-sort/
+
+def bubble_sort(arr)
   len = arr.length
   return arr if len <= 1
 

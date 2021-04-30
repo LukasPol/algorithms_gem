@@ -1,6 +1,6 @@
 # Question: https://www.geeksforgeeks.org/jump-search/
 
-def jumpSearch(arr, x)
+def jump_search(arr, x)
   len = arr.length
   step = Math.sqrt(len)
 
@@ -39,6 +39,6 @@ x = 50 # output: -1
 # arr = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610]
 # x = 50
 
-result = jumpSearch(arr, x)
+result = jump_search(arr, x)
 
 puts result < 0 ? "Number '#{x}' is not present in array" : "Number '#{x}' is at index #{result}"

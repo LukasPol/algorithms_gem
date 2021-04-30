@@ -1,6 +1,6 @@
 # Question: https://www.geeksforgeeks.org/binary-search/
 
-def binarySearch(arr, left, right, x)
+def binary_search(arr, left, right, x)
   if right >= left
     mid = left + (right-left) / 2
     mid = mid.floor
@@ -10,11 +10,11 @@ def binarySearch(arr, left, right, x)
 
     elsif arr[mid] > x
       right = mid - 1
-      return binarySearch(arr, left, right, x)
+      return binary_search(arr, left, right, x)
 
     else
       left = mid + 1
-      return binarySearch(arr, left, right, x)
+      return binary_search(arr, left, right, x)
     end
 
   else
@@ -39,7 +39,7 @@ end
 
 n = arr.length - 1
 
-result = binarySearch(arr, 0, n, x)
+result = binary_search(arr, 0, n, x)
 puts result < 0 ?
     "Element is not present in array" :
     "Element is present at index #{result}"
