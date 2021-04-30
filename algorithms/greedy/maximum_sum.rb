@@ -1,9 +1,7 @@
 # Question: https://www.geeksforgeeks.org/maximize-array-sun-after-k-negation-operations/
 
-def maximunSum(arr, k)
-  len = arr.size
-  
-  k.times do |a|
+def maximun_sum(arr, k)  
+  k.times do
     min = arr.max
 
     index = 0
@@ -19,10 +17,7 @@ def maximunSum(arr, k)
     arr[index] = -arr[index]
   end
 
-  sum = 0 
-  arr.each do |item|
-    sum += item
-  end
+  s = arr.sum
 
   sum
 end
@@ -33,4 +28,4 @@ end
 arr = [-2, 0, 5, -1, 2]
 k = 4
 
-puts maximunSum(arr, k)
+puts maximun_sum(arr, k)
