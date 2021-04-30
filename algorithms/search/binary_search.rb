@@ -1,3 +1,5 @@
+# Question: https://www.geeksforgeeks.org/binary-search/
+
 def binarySearch(arr, left, right, x)
   if right >= left
     mid = left + (right-left) / 2
@@ -20,8 +22,21 @@ def binarySearch(arr, left, right, x)
   end
 end
 
-arr = [ 1, 3, 4, 10, 40, 55, 90 ]
-x = 90
+# Test 1
+# arr = [ 1, 3, 4, 10, 40, 55, 90 ]
+# x = 90
+# Output: 6
+
+# Test 1
+# arr = [ 1, 3, 4, 10, 40, 55, 90 ]
+# x = 4
+# Output: 2
+
+# Test 1
+# arr = [ 40, 55, 1, 3, 4, 10, 90 ]
+# x = 90
+
+
 n = arr.length - 1
 
 result = binarySearch(arr, 0, n, x)

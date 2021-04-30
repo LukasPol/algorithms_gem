@@ -1,3 +1,5 @@
+# Question: https://www.geeksforgeeks.org/jump-search/
+
 def jumpSearch(arr, x)
   len = arr.length
   step = Math.sqrt(len)
@@ -25,8 +27,17 @@ def jumpSearch(arr, x)
   return -1
 end
 
+# Test 1
 arr = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610]
-x = 50
+x = 50 # output: -1
+
+# # Test 2
+# arr = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610]
+# x = 21 # output: 8
+
+# # Test 3
+# arr = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610]
+# x = 50
 
 result = jumpSearch(arr, x)
 
