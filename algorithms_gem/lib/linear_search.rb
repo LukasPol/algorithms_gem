@@ -1,4 +1,4 @@
-lass LinearSearch
+class LinearSearch
   def initialize(list, number)
     @list = list
     @number = number
