@@ -1,4 +1,4 @@
-require "binary_search"
+require "search/binary_search"
 
 RSpec.describe "Binary Search" do
   it "If return element's index in array" do
@@ -6,7 +6,7 @@ RSpec.describe "Binary Search" do
     number = 90
     len = arr.length - 1
 
-    index = BinarySearch.new(arr, 0, len, number).search
+    index = Search::BinarySearch.new(arr, 0, len, number).search
 
     expect(index).to eq(6)
   end
@@ -16,7 +16,7 @@ RSpec.describe "Binary Search" do
     number = 50
     len = arr.length - 1
 
-    index = BinarySearch.new(arr, 0, len, number).search
+    index = Search::BinarySearch.new(arr, 0, len, number).search
 
     expect(index).to eq(-1)
   end
