@@ -1,6 +1,6 @@
-require 'linear_search'
+require "linear_search"
 
-RSpec.describe 'Linear Search' do
+RSpec.describe "Linear Search" do
   it "If return element's index in array" do
     list = [1, 6, 2, 9, 10]
     number = 9

@@ -1,6 +1,6 @@
-require 'jump_search'
+require "jump_search"
 
-RSpec.describe 'jump Search' do
+RSpec.describe "jump Search" do
   it "If return element's index in array" do
     arr = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610]
     number = 21

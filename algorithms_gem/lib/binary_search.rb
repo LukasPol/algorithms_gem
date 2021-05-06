@@ -11,25 +11,26 @@ class BinarySearch
   end
 
   private
-    def find_element(arr, left, right, number)
-      if right >= left
-        mid = left + (right-left) / 2
-        mid = mid.floor
 
-        if arr[mid] == number
-          return mid
+  def find_element(arr, left, right, number)
+    if right >= left
+      mid = left + (right - left) / 2
+      mid = mid.floor
 
-        elsif arr[mid] > number
-          right = mid - 1
-          return find_element(arr, left, right, number)
+      if arr[mid] == number
+        mid
 
-        else
-          left = mid + 1
-          return find_element(arr, left, right, number)
-        end
+      elsif arr[mid] > number
+        right = mid - 1
+        find_element(arr, left, right, number)
 
       else
-        return -1
+        left = mid + 1
+        find_element(arr, left, right, number)
       end
+
+    else
+      -1
     end
+  end
 end
