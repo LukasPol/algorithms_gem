@@ -1,8 +1,8 @@
-require 'binary_search'
+require "binary_search"
 
-RSpec.describe 'Binary Search' do
+RSpec.describe "Binary Search" do
   it "If return element's index in array" do
-    arr = [ 1, 3, 4, 10, 40, 55, 90 ]
+    arr = [1, 3, 4, 10, 40, 55, 90]
     number = 90
     len = arr.length - 1
 

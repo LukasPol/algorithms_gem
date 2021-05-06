@@ -9,10 +9,11 @@ class LinearSearch
   end
 
   private
-    def find_element
-      @list.each_with_index do |item, index|
-        return index if item == @number
-      end
-      -1
+
+  def find_element
+    @list.each_with_index do |item, index|
+      return index if item == @number
     end
+    -1
+  end
 end

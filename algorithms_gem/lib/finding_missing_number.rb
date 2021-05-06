@@ -9,15 +9,16 @@ class FindingMissingNumber
   end
 
   private
-    def missing_number
-      total = (@len + 1) * (@len + 2) / 2
 
-      amount = 0
+  def missing_number
+    total = (@len + 1) * (@len + 2) / 2
 
-      @arr.each do |item|
-        amount += item
-      end
+    amount = 0
 
-      total - amount
+    @arr.each do |item|
+      amount += item
     end
+
+    total - amount
+  end
 end
