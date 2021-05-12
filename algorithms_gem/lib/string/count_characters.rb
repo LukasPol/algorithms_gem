@@ -2,9 +2,11 @@
 
 module PString
   class CountCharacter
+    attr_reader :string, :counter
+
     def initialize(string)
       @string = string
-      @count = {upper: 0, down: 0, number: 0, special: 0 }
+      @counter = {upper: 0, down: 0, number: 0, special: 0 }
     end
 
     def count
@@ -14,18 +16,18 @@ module PString
     private
 
     def count_char
-      @string.each_char do |char|
-        if !char.scan(/[!@#$%^&*()_+{}\[\]:;'"\/\\?><.,]/).empty?
-          @count[:special] +=1
-        elsif char !~ /\D/
-          @count[:number] +=1
-        elsif char == char.upcase
-          @count[:upper] += 1
-        elsif char == char.downcase
-          @count[:down] +=1
+      @string.each_byte do |char|
+        if char >= 65 && char <= 90
+          counter[:upper] += 1
+        elsif char >= 97 && char <= 122
+          counter[:down] +=1
+        elsif char >= 48 && char <= 57
+          counter[:number] +=1
+        else
+          counter[:special] +=1
         end
       end
-      @count
+      counter
     end
   end
 end
